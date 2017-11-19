@@ -1,6 +1,6 @@
 #include "lcd.h"
 #include "ascii.h"	
-
+#include "systick.h"
 
 static void                   LCD_GPIO_Config         ( void );
 static void                   LCD_FSMC_Config         ( void );
@@ -28,11 +28,9 @@ void LCD_Rst ( void )
 	GPIO_ResetBits ( LCD_RST_PORT, LCD_RST_PIN );	 
 
 	Delay ( 0xAFFf<<2 ); 					   
-
 	GPIO_SetBits ( LCD_RST_PORT, LCD_RST_PIN );		 	 
 
 	Delay ( 0xAFFf<<2 ); 	
-	
 }
 
 
