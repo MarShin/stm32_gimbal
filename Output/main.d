@@ -17,5 +17,12 @@
 ..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\..\output\main.o: ..\..\User\mpu6050.h
-..\..\output\main.o: ..\..\User\i2cdriver.h
+..\..\output\main.o: ..\..\User\joystick.h
+..\..\output\main.o: ..\..\User\i2c_sensors.h
+..\..\output\main.o: ..\..\User\systick.h
+..\..\output\main.o: ..\..\User\systick.h
+..\..\output\main.o: ..\..\User\uart.h
+..\..\output\main.o: ..\..\Libraries\FWlib\inc\stm32f10x_usart.h
+..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\..\output\main.o: ..\..\User\led.h
+..\..\output\main.o: ..\..\User\AHRS.h

@@ -330,6 +330,21 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x559784D6)
+F (..\..\Libraries\FWlib\src\stm32f10x_systick.c)(0x5A11B5FD)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_systick.o --omf_browse ..\..\output\stm32f10x_systick.crf --depend ..\..\output\stm32f10x_systick.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_systick.h)(0x5A11B2A5)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x559784D6)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x559784D6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x559784D6)
+I (..\..\User\stm32f10x_conf.h)(0x5A0DCDAC)
+I (..\..\Libraries\FWlib\inc\stm32f10x_adc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_dma.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_fsmc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x559784D6)
+F (..\..\Libraries\FWlib\inc\stm32f10x_systick.h)(0x5A11B2A5)()
 F (..\..\User\stm32f10x_it.c)(0x559784D4)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\stm32f10x_it.o --omf_browse ..\..\output\stm32f10x_it.crf --depend ..\..\output\stm32f10x_it.d)
 I (..\..\User\stm32f10x_it.h)(0x559784D4)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x559784D6)
@@ -344,7 +359,7 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x559784D6)
-F (..\..\User\main.c)(0x5A0E970A)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\main.o --omf_browse ..\..\output\main.crf --depend ..\..\output\main.d)
+F (..\..\User\main.c)(0x5A11CCF1)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\main.o --omf_browse ..\..\output\main.crf --depend ..\..\output\main.d)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x559784D6)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x559784D6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -362,9 +377,15 @@ I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\..\User\mpu6050.h)(0x57409DD8)
-I (..\..\User\i2cdriver.h)(0x5A0E80CA)
-F (..\..\User\lcd\lcd.c)(0x593235E6)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\lcd.o --omf_browse ..\..\output\lcd.crf --depend ..\..\output\lcd.d)
+I (..\..\User\joystick.h)(0x5A11AF18)
+I (..\..\User\i2c_sensors.h)(0x5A11B37D)
+I (..\..\User\systick.h)(0x5A11B154)
+I (..\..\User\uart.h)(0x5A11C3EF)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x559784D6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
+I (..\..\User\led.h)(0x5A11CA82)
+I (..\..\User\AHRS.h)(0x5A11CCE3)
+F (..\..\User\lcd\lcd.c)(0x5A11BE45)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\lcd.o --omf_browse ..\..\output\lcd.crf --depend ..\..\output\lcd.d)
 I (..\..\User\lcd\lcd.h)(0x592E2E54)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x559784D6)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x559784D6)
@@ -379,12 +400,12 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x559784D6)
 I (..\..\User\lcd\ascii.h)(0x5719290A)
+I (..\..\User\systick.h)(0x5A11B154)
 F (..\..\User\lcd\lcd.h)(0x592E2E54)()
 F (..\..\User\lcd\ascii.h)(0x5719290A)()
-F (..\..\User\mpu6050.c)(0x57409DD8)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\mpu6050.o --omf_browse ..\..\output\mpu6050.crf --depend ..\..\output\mpu6050.d)
-I (..\..\User\mpu6050.h)(0x57409DD8)
-I (..\..\User\i2cdriver.h)(0x5A0E80CA)
-I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
+F (..\..\User\joystick.h)(0x5A11AF18)()
+F (..\..\User\joystick.c)(0x5A11AF14)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\joystick.o --omf_browse ..\..\output\joystick.crf --depend ..\..\output\joystick.d)
+I (..\..\User\joystick.h)(0x5A11AF18)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x559784D6)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x559784D6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -394,12 +415,12 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_adc.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_dma.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_fsmc.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x559784D6)
-F (..\..\User\mpu6050.h)(0x57409DD8)()
-F (..\..\User\i2cdriver.c)(0x5A0E816C)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\i2cdriver.o --omf_browse ..\..\output\i2cdriver.crf --depend ..\..\output\i2cdriver.d)
-I (..\..\User\i2cdriver.h)(0x5A0E80CA)
-I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
+F (..\..\User\i2c_sensors.h)(0x5A11B37D)()
+F (..\..\User\i2c_sensors.c)(0x5A11B915)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\i2c_sensors.o --omf_browse ..\..\output\i2c_sensors.crf --depend ..\..\output\i2c_sensors.d)
+I (..\..\User\i2c_sensors.h)(0x5A11B37D)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x559784D6)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x559784D6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
@@ -409,6 +430,62 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_adc.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_dma.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_fsmc.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x559784D6)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x559784D6)
-F (..\..\User\i2cdriver.h)(0x5A0E80CA)()
+I (..\..\User\systick.h)(0x5A11B154)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
+F (..\..\User\systick.h)(0x5A11B154)()
+F (..\..\User\systick.c)(0x5A11B13F)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\systick.o --omf_browse ..\..\output\systick.crf --depend ..\..\output\systick.d)
+I (..\..\Libraries\FWlib\inc\stm32f10x_systick.h)(0x5A11B2A5)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x559784D6)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x559784D6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x559784D6)
+I (..\..\User\stm32f10x_conf.h)(0x5A0DCDAC)
+I (..\..\Libraries\FWlib\inc\stm32f10x_adc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_dma.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_fsmc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x559784D6)
+I (..\..\User\systick.h)(0x5A11B154)
+F (..\..\User\uart.c)(0x5A11C3B9)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\uart.o --omf_browse ..\..\output\uart.crf --depend ..\..\output\uart.d)
+I (..\..\User\uart.h)(0x5A11C3EF)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x559784D6)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x559784D6)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x559784D6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x559784D6)
+I (..\..\User\stm32f10x_conf.h)(0x5A0DCDAC)
+I (..\..\Libraries\FWlib\inc\stm32f10x_adc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_dma.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_fsmc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x559784D6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x57F606B8)
+F (..\..\User\uart.h)(0x5A11C3EF)()
+F (..\..\User\led.c)(0x5A11CA9C)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\led.o --omf_browse ..\..\output\led.crf --depend ..\..\output\led.d)
+I (..\..\User\led.h)(0x5A11CA82)
+I (..\..\Libraries\CMSIS\stm32f10x.h)(0x559784D6)
+I (..\..\Libraries\CMSIS\core_cm3.h)(0x559784D6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\..\Libraries\CMSIS\system_stm32f10x.h)(0x559784D6)
+I (..\..\User\stm32f10x_conf.h)(0x5A0DCDAC)
+I (..\..\Libraries\FWlib\inc\stm32f10x_adc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_dma.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_fsmc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_gpio.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_i2c.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\stm32f10x_rcc.h)(0x559784D6)
+I (..\..\Libraries\FWlib\inc\misc.h)(0x559784D6)
+F (..\..\User\led.h)(0x5A11CA82)()
+F (..\..\User\AHRS.c)(0x5A11CCB4)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\User -I ..\..\Libraries\CMSIS -I ..\..\Libraries\FWlib\inc -I ..\..\User\lcd-I.\RTE\_LAB6-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\ahrs.o --omf_browse ..\..\output\ahrs.crf --depend ..\..\output\ahrs.d)
+I (..\..\User\ahrs.h)(0x5A11CCE3)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
+F (..\..\User\AHRS.h)(0x5A11CCE3)()
