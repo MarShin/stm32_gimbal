@@ -12,5 +12,8 @@
 ###### PWM modulation
 ###### Needs for PID control ?
 
+# Difficulties:
+##### yaw value drifting [adopt megnatometer - not trust worthy]
+
 # Source:
 ###### https://drive.google.com/file/d/0BxLegIn7aAoEWWlSeFFLTGVmeVk/view
