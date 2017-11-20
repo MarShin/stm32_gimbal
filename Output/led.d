@@ -12,4 +12,5 @@
 ..\..\output\led.o: ..\..\Libraries\FWlib\inc\stm32f10x_gpio.h
 ..\..\output\led.o: ..\..\Libraries\FWlib\inc\stm32f10x_i2c.h
 ..\..\output\led.o: ..\..\Libraries\FWlib\inc\stm32f10x_rcc.h
+..\..\output\led.o: ..\..\Libraries\FWlib\inc\stm32f10x_tim.h
 ..\..\output\led.o: ..\..\Libraries\FWlib\inc\misc.h

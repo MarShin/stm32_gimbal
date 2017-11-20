@@ -13,6 +13,7 @@
 ..\..\output\uart.o: ..\..\Libraries\FWlib\inc\stm32f10x_gpio.h
 ..\..\output\uart.o: ..\..\Libraries\FWlib\inc\stm32f10x_i2c.h
 ..\..\output\uart.o: ..\..\Libraries\FWlib\inc\stm32f10x_rcc.h
+..\..\output\uart.o: ..\..\Libraries\FWlib\inc\stm32f10x_tim.h
 ..\..\output\uart.o: ..\..\Libraries\FWlib\inc\misc.h
 ..\..\output\uart.o: ..\..\Libraries\FWlib\inc\stm32f10x_usart.h
 ..\..\output\uart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

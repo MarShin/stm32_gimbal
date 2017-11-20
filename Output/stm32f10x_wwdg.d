@@ -12,4 +12,5 @@
 ..\..\output\stm32f10x_wwdg.o: ..\..\Libraries\FWlib\inc\stm32f10x_gpio.h
 ..\..\output\stm32f10x_wwdg.o: ..\..\Libraries\FWlib\inc\stm32f10x_i2c.h
 ..\..\output\stm32f10x_wwdg.o: ..\..\Libraries\FWlib\inc\stm32f10x_rcc.h
+..\..\output\stm32f10x_wwdg.o: ..\..\Libraries\FWlib\inc\stm32f10x_tim.h
 ..\..\output\stm32f10x_wwdg.o: ..\..\Libraries\FWlib\inc\misc.h

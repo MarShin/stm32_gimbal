@@ -1,0 +1,16 @@
+..\..\output\servo.o: ..\..\User\servo.c
+..\..\output\servo.o: ..\..\User\servo.h
+..\..\output\servo.o: ..\..\Libraries\CMSIS\stm32f10x.h
+..\..\output\servo.o: ..\..\Libraries\CMSIS\core_cm3.h
+..\..\output\servo.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\..\output\servo.o: ..\..\Libraries\CMSIS\system_stm32f10x.h
+..\..\output\servo.o: ..\..\User\stm32f10x_conf.h
+..\..\output\servo.o: ..\..\Libraries\FWlib\inc\stm32f10x_adc.h
+..\..\output\servo.o: ..\..\Libraries\CMSIS\stm32f10x.h
+..\..\output\servo.o: ..\..\Libraries\FWlib\inc\stm32f10x_dma.h
+..\..\output\servo.o: ..\..\Libraries\FWlib\inc\stm32f10x_fsmc.h
+..\..\output\servo.o: ..\..\Libraries\FWlib\inc\stm32f10x_gpio.h
+..\..\output\servo.o: ..\..\Libraries\FWlib\inc\stm32f10x_i2c.h
+..\..\output\servo.o: ..\..\Libraries\FWlib\inc\stm32f10x_rcc.h
+..\..\output\servo.o: ..\..\Libraries\FWlib\inc\stm32f10x_tim.h
+..\..\output\servo.o: ..\..\Libraries\FWlib\inc\misc.h

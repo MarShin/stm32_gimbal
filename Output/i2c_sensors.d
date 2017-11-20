@@ -12,6 +12,7 @@
 ..\..\output\i2c_sensors.o: ..\..\Libraries\FWlib\inc\stm32f10x_gpio.h
 ..\..\output\i2c_sensors.o: ..\..\Libraries\FWlib\inc\stm32f10x_i2c.h
 ..\..\output\i2c_sensors.o: ..\..\Libraries\FWlib\inc\stm32f10x_rcc.h
+..\..\output\i2c_sensors.o: ..\..\Libraries\FWlib\inc\stm32f10x_tim.h
 ..\..\output\i2c_sensors.o: ..\..\Libraries\FWlib\inc\misc.h
 ..\..\output\i2c_sensors.o: ..\..\User\systick.h
 ..\..\output\i2c_sensors.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

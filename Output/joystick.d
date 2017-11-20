@@ -12,4 +12,5 @@
 ..\..\output\joystick.o: ..\..\Libraries\FWlib\inc\stm32f10x_gpio.h
 ..\..\output\joystick.o: ..\..\Libraries\FWlib\inc\stm32f10x_i2c.h
 ..\..\output\joystick.o: ..\..\Libraries\FWlib\inc\stm32f10x_rcc.h
+..\..\output\joystick.o: ..\..\Libraries\FWlib\inc\stm32f10x_tim.h
 ..\..\output\joystick.o: ..\..\Libraries\FWlib\inc\misc.h

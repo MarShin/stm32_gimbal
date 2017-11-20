@@ -42,9 +42,9 @@
 #define Res107 107
 
 #define start_read_address 59
-#define gyro_zero_x -55
-#define gyro_zero_y -31
-#define gyro_zero_z -123
+#define gyro_zero_x 55
+#define gyro_zero_y 8
+#define gyro_zero_z -13
 
 #define gyro_sensitivity 131
 #define acce_sensitivity 16384

@@ -1,6 +1,7 @@
 #include "joystick.h"
 
 volatile u16 ADC_val[arraySize] = {0};
+volatile u16 stick_val[arraySize] = {0};
 
 void DMA_init(void){
 	DMA_InitTypeDef DMA_InitStrcuture;
@@ -26,6 +27,13 @@ void DMA_init(void){
 	DMA_Cmd(DMA1_Channel1, ENABLE);
 }
 
+void getJoystick(void){
+	uint8_t i = 0;
+	for (i=0;i<2;i++){
+		stick_val[i] = ADC_val[i];
+	}
+}
+
 void joystickInit(void){
 	
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -49,8 +57,8 @@ void joystickInit(void){
 	
 	
 	RCC_ADCCLKConfig(RCC_PCLK2_Div6);
-	ADC_RegularChannelConfig(ADC1, ADC_Channel_14, 1, ADC_SampleTime_1Cycles5);
-	ADC_RegularChannelConfig(ADC1, ADC_Channel_15, 2, ADC_SampleTime_1Cycles5);
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_14, 1, ADC_SampleTime_71Cycles5);
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_15, 2, ADC_SampleTime_71Cycles5);
 	ADC_Cmd(ADC1, ENABLE);
 	/* Enable ADC1 reset calibration register */   
 	ADC_ResetCalibration(ADC1);
@@ -63,4 +71,20 @@ void joystickInit(void){
 	
 	ADC_SoftwareStartConvCmd(ADC1, ENABLE);
 	
+}
+
+void buttonInit(void){
+	GPIO_InitTypeDef GPIO_InitStructure;
+    
+  //Pin A0 - Key1
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
+    
+	//Pin C13 - Key2
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+	GPIO_Init(GPIOC, &GPIO_InitStructure);
 }

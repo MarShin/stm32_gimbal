@@ -11,6 +11,7 @@
 ..\..\output\main.o: ..\..\Libraries\FWlib\inc\stm32f10x_gpio.h
 ..\..\output\main.o: ..\..\Libraries\FWlib\inc\stm32f10x_i2c.h
 ..\..\output\main.o: ..\..\Libraries\FWlib\inc\stm32f10x_rcc.h
+..\..\output\main.o: ..\..\Libraries\FWlib\inc\stm32f10x_tim.h
 ..\..\output\main.o: ..\..\Libraries\FWlib\inc\misc.h
 ..\..\output\main.o: ..\..\User\lcd\lcd.h
 ..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
@@ -26,3 +27,4 @@
 ..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\..\output\main.o: ..\..\User\led.h
 ..\..\output\main.o: ..\..\User\AHRS.h
+..\..\output\main.o: ..\..\User\servo.h

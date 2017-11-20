@@ -589,6 +589,36 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\systick.c</FilePath>
             </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\User\uart.h</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\User\led.h</FilePath>
+            </File>
+            <File>
+              <FileName>AHRS.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\AHRS.c</FilePath>
+            </File>
+            <File>
+              <FileName>AHRS.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\User\AHRS.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
