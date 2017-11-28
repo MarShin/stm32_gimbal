@@ -1,7 +1,7 @@
 #include "joystick.h"
 
 volatile u16 ADC_val[arraySize] = {0};
-volatile u16 stick_val[arraySize] = {0};
+volatile s16 stick_val[arraySize] = {0};
 
 void DMA_init(void){
 	DMA_InitTypeDef DMA_InitStrcuture;
@@ -30,7 +30,8 @@ void DMA_init(void){
 void getJoystick(void){
 	uint8_t i = 0;
 	for (i=0;i<2;i++){
-		stick_val[i] = ADC_val[i];
+		stick_val[i] = ADC_val[i]/10-17;
+		stick_val[i] = (stick_val[i] < -8)? -8:stick_val[i];
 	}
 }
 
@@ -43,6 +44,13 @@ void joystickInit(void){
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_5;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOC, &GPIO_InitStructure);
+	
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOC, &GPIO_InitStructure);
 	GPIO_Init(GPIOC, &GPIO_InitStructure);
 	
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);

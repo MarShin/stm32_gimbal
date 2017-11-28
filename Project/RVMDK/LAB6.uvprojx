@@ -619,6 +619,16 @@
               <FileType>5</FileType>
               <FilePath>..\..\User\AHRS.h</FilePath>
             </File>
+            <File>
+              <FileName>servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\servo.c</FilePath>
+            </File>
+            <File>
+              <FileName>servo.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\User\servo.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

@@ -28,3 +28,4 @@
 ..\..\output\main.o: ..\..\User\led.h
 ..\..\output\main.o: ..\..\User\AHRS.h
 ..\..\output\main.o: ..\..\User\servo.h
+..\..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

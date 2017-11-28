@@ -14,3 +14,4 @@
 ..\..\output\servo.o: ..\..\Libraries\FWlib\inc\stm32f10x_rcc.h
 ..\..\output\servo.o: ..\..\Libraries\FWlib\inc\stm32f10x_tim.h
 ..\..\output\servo.o: ..\..\Libraries\FWlib\inc\misc.h
+..\..\output\servo.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

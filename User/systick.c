@@ -5,6 +5,61 @@ static uint8_t  delay_fac_us = 0;
 static uint16_t delay_fac_ms = 0;  
 static FlagStatus  Status;
 
+volatile u16 ticks = 0;
+volatile u16 seconds = 0;
+
+void ticks_init(void) {
+	NVIC_InitTypeDef NVIC_InitStructure;
+	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
+
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2 , ENABLE);
+	
+	TIM_TimeBaseStructure.TIM_Period = 1000;	                 				       // Timer period, 1000 ticks in one second
+	TIM_TimeBaseStructure.TIM_Prescaler = SystemCoreClock / 1000000 - 1;     // 72M/1M - 1 = 71
+	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);      							 // this part feeds the parameter we set above
+	
+	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);												 // Clear Interrupt bits
+	TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);													 // Enable TIM Interrupt
+	TIM_Cmd(TIM2, ENABLE);																							 // Counter Enable
+
+	
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;
+	NVIC_Init(&NVIC_InitStructure);
+	
+	//SysTick_Config(SystemCoreClock/1000);
+	ticks = seconds = 0;
+}
+
+void TIM2_IRQHandler(void){
+  if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET) {
+    TIM_ClearFlag(TIM2, TIM_FLAG_Update);
+    //TIM_ClearITPendingBit(TICKS_TIM, TIM_IT_Update);
+
+    if (ticks >= 999) {
+      ticks = 0;
+      seconds++;
+    } else {
+      ticks++;
+    }
+  }
+}
+
+u16 get_ticks(void) {
+	return ticks;
+}
+
+u16 get_seconds(void) {
+	return seconds;
+}
+
+u32 get_full_ticks(void)
+{
+	return seconds * 1000 + ticks;
+}
+
 
 void DELAY_Configuration(void)
 {

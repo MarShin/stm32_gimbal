@@ -17,8 +17,8 @@
 #define M_PI 3.14159265359
 #endif
 
-#define roll_angle_off_set  -2.1523
-#define pitch_angle_off_set -2.9361
+#define roll_angle_off_set  -2.1523-4.05
+#define pitch_angle_off_set -2.9361+2.15
 //----------------------------------------------------------------------------------------------------
 // Variable declaration
 
