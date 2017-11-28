@@ -43,7 +43,7 @@ int main(void)
 	while (1) {
 		u16 diff = abs(get_ticks() - ticks_img);
 		float roll, pitch, yaw;
-		if ( !(diff > 10)){ //50
+		if ( !(diff > 10)){ //10
 			continue;
 		}
 		ticks_img = get_ticks();
@@ -55,21 +55,30 @@ int main(void)
 		acc_x_temp,acc_y_temp,acc_z_temp);
 		getRollPitchYaw();
 		printf("ticks: %u\r\n",diff);
-		//printf("x:%d ",stick_val[0]);
-		//printf("y:%d\r\n",stick_val[1]/10-17);
-		//printf("y:%d\r\n",stick_val[1]);
 
+		roll = (rpy[2]-90)/180.0 *2000.0 +2500;
+		pitch = (rpy[1]-90)/180.0 *2000.0 +2500;
+		yaw = (rpy[0]-90)/180.0 *2000.0 +2500;
 		
-		roll = (rpy[2]+90)/180.0;
-		pitch = (rpy[1]+90)/180.0;
-		yaw = (rpy[0]+90)/180.0;
-		printf("R:%f P:%f Y:%f\r\n",rpy[2],rpy[1],rpy[0]);
-		printf("R:%f P:%f Y:%f\r\n",roll,pitch,yaw);
+		//roll = (rpy[2]+90)/180.0;
+		//pitch = (rpy[1]+90)/180.0;
+		//yaw = (rpy[0]+90)/180.0;
+		printf("R:%f P:%f Y:%f\r\n",rpy[0],rpy[1],rpy[2]);
+	  printf("ANGLE R:%f P:%f Y:%f\r\n",roll,pitch,yaw);
+		printf("\n");
+		
 		servoMove(1,pitch);
-		servoMove(2,yaw);
-		if (abs(stick_val[1]) > 1 ){
-			servoMove(0,TIM5->CCR2+stick_val[1]*5);
-		}
+		servoMove(0,-roll);
+		
+//		if ((stick_val[0] > 10.0) || (stick_val[0] < -10.0 ) ){
+//			printf("move X %f\r\n", TIM5->CCR2+(stick_val[0]));
+//			servoMove(0,TIM5->CCR2+stick_val[0]);
+//		}
+//		if ((stick_val[1] > 10.0 ) || (stick_val[1] < -10.0 )){
+//			printf("move Y %f\r\n", TIM5->CCR3+(stick_val[1]));
+//			servoMove(1,TIM5->CCR3+stick_val[1]);
+//		} 
+		
 		if (!(GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_2))){
 			while (!(GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_2)));
 			servoMove(0,PWM_norm[0]);
@@ -81,6 +90,8 @@ int main(void)
 		}
 		if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0)){
 			while (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0));
+
+			
 			servoMove(0,PWM_max[0]);
 			servoMove(1,PWM_max[1]);
 			servoMove(2,PWM_max[2]);
@@ -95,13 +106,28 @@ int main(void)
 		}
 		if (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13)){
 			while (GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13));
-			//servoMove(0,PWM_min[0]);
-			//servoMove(1,PWM_min[1]);
-			//servoMove(2,PWM_min[2]);
-			enable = true;
+			
+
+		
+		//	servoMove(0,PWM_min[0]);
+		//	servoMove(1,PWM_min[1]);
+		//	servoMove(2,PWM_min[2]);
+			//enable = true;
 			LED_on(Green);
 			LED_off(Red);
-			LED_off(Blue);		
+			LED_off(Blue);	
+
+			while(1) {
+				if ((stick_val[0] > 10.0) || (stick_val[0] < -10.0 ) ){
+					printf("move X %f\r\n", TIM5->CCR2+(stick_val[0]));
+					servoMove(0,TIM5->CCR2+stick_val[0]);
+				}
+			
+				if ((stick_val[1] > 10.0 ) || (stick_val[1] < -10.0 )){
+					printf("move Y %f\r\n", TIM5->CCR3+(stick_val[1]));
+					servoMove(1,TIM5->CCR3+stick_val[1]);
+				} 
+			}
 		}
 		//printf("%d\r\n",TIM2->CCR2);
 		

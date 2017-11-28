@@ -65,18 +65,18 @@ void servoStop(void){
 void servoMove(uint16_t id, uint16_t pwm){
 	pwm = (pwm>PWM_max[id]) ? PWM_max[id]:pwm;
 	pwm = (pwm<PWM_min[id]) ? PWM_min[id]:pwm;
-	if (!enable){
-	return;
-	}
+	//if (!enable){
+	//return;
+	//}
 	switch (id){
 		case 0:
-			TIM5->CCR2 = pwm;
+			TIM5->CCR2 = pwm; //PA1: X axis
 			break;
 		case 1:
-			TIM5->CCR3 = pwm;
+			TIM5->CCR3 = pwm; //PA2: Y axis
 			break;
 		case 2:
-			TIM5->CCR4 = pwm;
+			TIM5->CCR4 = pwm; //PA3
 			break;
 		default:
 			break;

@@ -20,6 +20,6 @@ void buttonInit(void);
 
 
 extern volatile u16 ADC_val[arraySize];
-extern volatile s16 stick_val[arraySize];
+extern volatile float stick_val[arraySize];
 
 #endif

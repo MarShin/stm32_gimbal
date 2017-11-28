@@ -1,7 +1,7 @@
 #include "joystick.h"
 
 volatile u16 ADC_val[arraySize] = {0};
-volatile s16 stick_val[arraySize] = {0};
+volatile float stick_val[arraySize] = {0};
 
 void DMA_init(void){
 	DMA_InitTypeDef DMA_InitStrcuture;
@@ -30,8 +30,9 @@ void DMA_init(void){
 void getJoystick(void){
 	uint8_t i = 0;
 	for (i=0;i<2;i++){
-		stick_val[i] = ADC_val[i]/10-17;
-		stick_val[i] = (stick_val[i] < -8)? -8:stick_val[i];
+		stick_val[i] = (float)((ADC_val[i])/255.0*(100) -33.0);
+		//stick_val[i] = ADC_val[i]/10-17;
+		stick_val[i] = (stick_val[i] > 30 )? 30 :stick_val[i];
 	}
 }
 

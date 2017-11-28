@@ -229,9 +229,9 @@ void getRollPitchYaw(void)
   gy = 2 * (q0*q1 + q2*q3);
   gz = q0*q0 - q1*q1 - q2*q2 + q3*q3;  
 	
-	rpy[2] = atan(gy / sqrt(gx*gx + gz*gz))  * 180/M_PI - roll_angle_off_set;
+	rpy[0] = atan(gy / sqrt(gx*gx + gz*gz))  * 180/M_PI - roll_angle_off_set;
 	rpy[1] = -atan(gx / sqrt(gy*gy + gz*gz))  * 180/M_PI - pitch_angle_off_set;
-  rpy[0] = atan2(2*q1*q2 - 2*q0*q3, 2*q0*q0 + 2*q1*q1 - 1)*180 / M_PI;  
+  rpy[2] = atan2(2*q1*q2 - 2*q0*q3, 2*q0*q0 + 2*q1*q1 - 1)*180 / M_PI;  
 }
 
 void getEangle(void)
